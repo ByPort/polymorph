@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Polymorph</title>
+    <style>
+      textarea {
+        width: 90vw;
+        height: 90vh;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="page">
+      <textarea name="content" form="page"></textarea>
+      <input type="submit">
+    </form>
+    <script>
+      const page = document.querySelector('textarea');
+      document.querySelector('#page').addEventListener('submit', (e) => {
+        e.preventDefault();
+        fetch('/', {
+          method: 'post',
+          body: page.value,
+        });
+      });
+      fetch('/', {
+        method: 'get',
+      })
+        .then(res => res.text())
+        .then(content => page.value = content);
+    </script>
+  </body>
+</html>

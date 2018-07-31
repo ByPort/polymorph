@@ -1,0 +1,12 @@
+{
+  "name": "polymorph",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Vladimir Sernatsky <byport1112@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}
